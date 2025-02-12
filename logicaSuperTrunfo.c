@@ -32,6 +32,9 @@ int main() {
         float PIB2;
         float PIB_per_capta2 ;
         float numero_de_pontos_turisticos2;
+
+        //Outras variaves
+        int EscolhaJogadores;
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -66,7 +69,7 @@ int main() {
         printf("Digite o PIB da cidade: ");
         scanf("%f", &PIB1 );   
 
-        printf("Digite o número de pontos turisticos da cidade:");
+        printf("Digite o número de pontos turisticos da cidade: ");
         scanf("%f", &numero_de_pontos_turisticos1 );
         puts("");
 
@@ -91,7 +94,7 @@ int main() {
         printf("Digite o PIB da cidade: ");
         scanf("%f", &PIB2 );   
 
-        printf("Digite o número de pontos turisticos da cidade:");
+        printf("Digite o número de pontos turisticos da cidade: ");
         scanf("%f", &numero_de_pontos_turisticos2 );
 
                 /*
@@ -121,7 +124,8 @@ int main() {
     // Agora vamos jogar
         printf ("Vamos Jogar?\n");
         printf ("Jogadores, escolham sabiamente, qual propriedade vocês querem comparar?\n");
-        printf ("Digite o número da opção.\n");
+        puts ("");
+       
         printf ("1. População\n");
         printf ("2. Área\n");
         printf ("3. PIB\n");
@@ -130,23 +134,77 @@ int main() {
         printf ("6. PIB per capta\n");
         puts ("");
 
-        int EscolhaJogador1;
-        int EscolhaJogador2;
+        
+         printf ("Digite o número da opção: ");
+            scanf ("%d", &EscolhaJogadores);
+            puts ("");
 
-        printf ("Escolha do jogador 1:");
-        scanf ("%d", &EscolhaJogador1);
-        puts ("");
-        printf ("Escolha do jogador 2:");
-        scanf ("%d", &EscolhaJogador2);
-
-        switch (EscolhaJogador1)
+        switch (EscolhaJogadores)
         {
         case 1:
-            printf ("")
+                        
+            if (populacao1 > populacao2)
+            {
+                printf (" Jogador 1 sua carta ganha no quesito população, você ganhou!");
+            } else {
+                printf ("Jogador 2 sua carta ganha no quesito população, você ganhou!");
+            }
+            break;
+
+        case 2:
+                        
+            if (area1 > area2)
+            {
+                printf (" Jogador 1 sua carta ganha no quesito área, você ganhou!");
+            } else {
+                printf ("Jogador 2 sua carta ganha no quesito área, você ganhou!");
+            }
+            break;
+
+        case 3:
+                        
+            if (Densidade_populacional1 > Densidade_populacional2)
+            {
+                printf (" Jogador 1 sua carta ganha no quesito densidade populacional, você ganhou!");
+            } else {
+                printf ("Jogador 2 sua carta ganha no quesito densidade populacional, você ganhou!");
+            }
+            break;
+
+        case 4:
+                        
+            if (PIB1 > PIB2)
+            {
+                printf (" Jogador 1 sua carta ganha no quesito PIB, você ganhou!");
+            } else {
+                printf ("Jogador 2 sua carta ganha no quesito PIB, você ganhou!");
+            }
             break;
         
-        default:
+        case 5:
+                        
+            if (PIB_per_capta1 > PIB_per_capta2)
+            {
+                printf (" Jogador 1 sua carta ganha no quesito PIB per capta, você ganhou!");
+            } else {
+                printf ("Jogador 2 sua carta ganha no quesito PIB per capta, você ganhou!");
+            }
             break;
+        
+        case 6:
+                        
+            if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2)
+            {
+                printf (" Jogador 1 sua carta ganha no quesito número de pontos turisticos, você ganhou!");
+            } else {
+                printf ("Jogador 2 sua carta ganha no quesito número de pontos turisticos, você ganhou!");
+            }
+            break;
+
+        default:
+            printf ("Opção inválida");
+
+
         }
 
 /*
