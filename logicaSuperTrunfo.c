@@ -35,6 +35,13 @@ int main() {
 
         //Outras variaves
         int EscolhaJogadores;
+        int Escolha1;
+        int Escolha2;
+        float Atributo1Cidade1;
+        float Atributo1Cidade2;
+        float Atributo2Cidade1; 
+        float Atributo2Cidade2;
+
     
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -128,84 +135,162 @@ int main() {
        
         printf ("1. População\n");
         printf ("2. Área\n");
-        printf ("3. PIB\n");
-        printf ("4. Número de pontos turísticos\n");
-        printf ("5. Densidade populacional\n");
-        printf ("6. PIB per capta\n");
+        printf ("3. Densidade populacional\n");
+        printf ("4. PIB\n");
+        printf ("5. PIB percapta\n");
+        printf ("6. Número de pontos turisticos\n");
         puts ("");
 
         
-         printf ("Digite o número da opção: ");
-            scanf ("%d", &EscolhaJogadores);
-            puts ("");
+        printf ("Digite duas opções para comparar\n");
+        printf ("Primeira opção: ");
+        scanf ("%d", &Escolha1);
+        printf ("Segunda opção: ");
+        scanf ("%d", &Escolha2);
+        puts ("");
+        printf ("Resultado parcial\n");
 
-        switch (EscolhaJogadores)
-        {
+    // Comparação da opção 1
+    switch (Escolha1) {
         case 1:
-                        
-            if (populacao1 > populacao2)
-            {
-                printf (" Jogador 1 sua carta ganha no quesito população, você ganhou!");
+            if (populacao1 > populacao2) {
+                printf("Jogador 1, sua carta ganha no quesito população.\n");
             } else {
-                printf ("Jogador 2 sua carta ganha no quesito população, você ganhou!");
+                printf("Jogador 2, sua carta ganha no quesito população.\n");
             }
             break;
 
         case 2:
-                        
-            if (area1 > area2)
-            {
-                printf (" Jogador 1 sua carta ganha no quesito área, você ganhou!");
+            if (area1 > area2) {
+                printf("Jogador 1, sua carta ganha no quesito área.\n");
             } else {
-                printf ("Jogador 2 sua carta ganha no quesito área, você ganhou!");
+                printf("Jogador 2, sua carta ganha no quesito área.\n");
             }
             break;
 
         case 3:
-                        
-            if (Densidade_populacional1 > Densidade_populacional2)
-            {
-                printf (" Jogador 1 sua carta ganha no quesito densidade populacional, você ganhou!");
+            if (Densidade_populacional1 > Densidade_populacional2) {
+                printf("Jogador 1, sua carta ganha no quesito densidade populacional.\n");
             } else {
-                printf ("Jogador 2 sua carta ganha no quesito densidade populacional, você ganhou!");
+                printf("Jogador 2, sua carta ganha no quesito densidade populacional.\n");
             }
             break;
 
         case 4:
-                        
-            if (PIB1 > PIB2)
-            {
-                printf (" Jogador 1 sua carta ganha no quesito PIB, você ganhou!");
+            if (PIB1 > PIB2) {
+                printf("Jogador 1, sua carta ganha no quesito PIB.\n");
             } else {
-                printf ("Jogador 2 sua carta ganha no quesito PIB, você ganhou!");
+                printf("Jogador 2, sua carta ganha no quesito PIB.\n");
             }
             break;
-        
+
         case 5:
-                        
-            if (PIB_per_capta1 > PIB_per_capta2)
-            {
-                printf (" Jogador 1 sua carta ganha no quesito PIB per capta, você ganhou!");
+            if (PIB_per_capta1 > PIB_per_capta2) {
+                printf("Jogador 1, sua carta ganha no quesito PIB per capta.\n");
             } else {
-                printf ("Jogador 2 sua carta ganha no quesito PIB per capta, você ganhou!");
+                printf("Jogador 2, sua carta ganha no quesito PIB per capta.\n");
             }
             break;
-        
+
         case 6:
-                        
-            if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2)
-            {
-                printf (" Jogador 1 sua carta ganha no quesito número de pontos turisticos, você ganhou!");
+            if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2) {
+                printf("Jogador 1, sua carta ganha no quesito numero de ponto turisticos.\n");
             } else {
-                printf ("Jogador 2 sua carta ganha no quesito número de pontos turisticos, você ganhou!");
+                printf("Jogador 2, sua carta ganha no quesito numero de ponto turisticos.\n");
             }
             break;
 
         default:
-            printf ("Opção inválida");
+            printf("Opção inválida para a primeira escolha.\n");
+            break;
+    }
+
+    // Comparação da opção 2
+    switch (Escolha2) {
+        case 1:
+            if (populacao1 > populacao2) {
+                printf("Jogador 1, sua carta ganha no quesito população.\n");
+            } else {
+                printf("Jogador 2, sua carta ganha no quesito população.\n");
+            }
+            break;
+
+        case 2:
+            if (area1 > area2) {
+                printf("Jogador 1, sua carta ganha no quesito área.\n");
+            } else {
+                printf("Jogador 2, sua carta ganha no quesito área.\n");
+            }
+            break;
+
+        case 3:
+            if (Densidade_populacional1 > Densidade_populacional2) {
+                printf("Jogador 1, sua carta ganha no quesito densidade populacional.\n");
+            } else {
+                printf("Jogador 2, sua carta ganha no quesito densidade populacional.\n");
+            }
+            break;
+
+        case 4:
+            if (PIB1 > PIB2) {
+                printf("Jogador 1, sua carta ganha no quesito PIB.\n");
+            } else {
+                printf("Jogador 2, sua carta ganha no quesito PIB.\n");
+            }
+            break;
+
+        case 5:
+            if (PIB_per_capta1 > PIB_per_capta2) {
+                printf("Jogador 1, sua carta ganha no quesito PIB per capta.\n");
+            } else {
+                printf("Jogador 2, sua carta ganha no quesito PIB per capta.\n");
+            }
+            break;
+
+        case 6:
+            if (numero_de_pontos_turisticos1 > numero_de_pontos_turisticos2) {
+                printf("Jogador 1, sua carta ganha no quesito numero de ponto turisticos.\n");
+            } else {
+                printf("Jogador 2, sua carta ganha no quesito numero de ponto turisticos.\n");
+            }
+            break;
+
+        default:
+            printf("Opção inválida para a segunda escolha.\n");
+            break;
+    }
 
 
-        }
+          Atributo1Cidade1 = (Escolha1 == 1) ? populacao1 :
+                              (Escolha1 == 2) ? area1 :
+                              (Escolha1 == 3) ? Densidade_populacional1 :
+                              (Escolha1 == 4) ? PIB1 :
+                              (Escolha1 == 5) ? PIB_per_capta1 : numero_de_pontos_turisticos1;
+
+           Atributo1Cidade2 = (Escolha1 == 1) ? populacao2 :
+                              (Escolha1 == 2) ? area2 :
+                              (Escolha1 == 3) ? Densidade_populacional2 :
+                              (Escolha1 == 4) ? PIB2 :
+                              (Escolha1 == 5) ? PIB_per_capta2 : numero_de_pontos_turisticos2;
+
+           Atributo2Cidade1 = (Escolha2 == 1) ? populacao1 :
+                              (Escolha2 == 2) ? area1 :
+                              (Escolha2 == 3) ? Densidade_populacional1 :
+                              (Escolha2 == 4) ? PIB1 :
+                              (Escolha2 == 5) ? PIB_per_capta1 : numero_de_pontos_turisticos1;
+
+           Atributo2Cidade2 = (Escolha2 == 1) ? populacao2 :
+                              (Escolha2 == 2) ? area2 :
+                              (Escolha2 == 3) ? Densidade_populacional2 :
+                              (Escolha2 == 4) ? PIB2 :
+                              (Escolha2 == 5) ? PIB_per_capta2 : numero_de_pontos_turisticos2;
+
+    puts ("");
+    printf ("***RESULTADO FINAL\n***");
+Atributo1Cidade1 > Atributo1Cidade2 && Atributo2Cidade1 > Atributo2Cidade2 ? printf ("Jogador 1, sua cidade venceu!") : 
+Atributo1Cidade1 < Atributo1Cidade2 && Atributo2Cidade1 < Atributo2Cidade2 ? printf ("Jogador 2, sua cidade venceu!") :
+Atributo1Cidade1 > Atributo1Cidade2 || Atributo2Cidade1 > Atributo2Cidade2 ? printf ("Cada cidade ganhou em um atributo, o resultado é Empate") : printf ("Os atributos são iguais, O resultado é Empate");
+    
 
 /*
     // Comparação de Cartas:
@@ -247,5 +332,5 @@ int main() {
                 printf ("Pois %s tem maior população, são %.2f habitantes.\n", Cidade2, populacao2);
 */
 
-    return 0;
+   return 0;
 }
